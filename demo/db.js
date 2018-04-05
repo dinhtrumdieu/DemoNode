@@ -1,34 +1,34 @@
 const mongoose = require('mongoose');
+
 mongoose.connect('mongodb://localhost:27017/testing').then(() => console.log('MongoDB connected!'))
     .catch(err => console.log(err));
 
-const MyModel = mongoose.model('location', new mongoose.Schema(
-    {
-        name: String,
-        location: {
-            coordinates: [Number],  // [<longitude>, <latitude>]
-        }
-    }));
-// Works
-
-MyModel.create({
-    name: "Polo Grounds",
-    location: {
-        coordinates: [-73.9375, 40.323],
+let LocationObject = mongoose.Schema({
+    loc: {
+        type: {type: String},
+        coordinates: []
     }
 });
+// define the index
+LocationObject.index({loc: '2dsphere'});
 
-MyModel.find(
-    {
-        location:
-            {
-                formType: [-73.9375, 40.323]
-            }
-    }
-).exec().then(data => {
-    console.log(data)
-}).catch(error => console.log(error));
+const location = mongoose.model('Location', LocationObject);
 
-/*MyModel.find().exec().then(data => {
-    console.log(data)
-}).catch(error => console.log(error));*/
+let data = [
+    {loc: {type: 'Point', coordinates: [-20.0, 5.0]}},
+    {loc: {type: 'Point', coordinates: [6.0, 10.0]}},
+    {loc: {type: 'Point', coordinates: [34.0, -50.0]}},
+    {loc: {type: 'Point', coordinates: [-100.0, 70.0]}},
+    {loc: {type: 'Point', coordinates: [38.0, 38.0]}}
+];
+
+/*
+location.create(data);*/
+
+let coords = {type: 'Point', coordinates: [6, 9]};
+
+location.find({loc: {$near: coords}}).exec().then(data => {
+    console.log('Closest to %s is %s', JSON.stringify(coords), data);
+}).catch(error => {
+    console.log(JSON.stringify(error))
+});

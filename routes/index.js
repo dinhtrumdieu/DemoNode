@@ -1,23 +1,17 @@
-import {MyModel} from "../models/Location";
 import {User} from "../models/User";
+import {Location} from "../models/Location";
 
 export const api = (app) => {
 
     // get list
     app.route('/')
         .get(function (req, res) {
-            MyModel.find({
-                location:
-                    { $near:
-                            {
-                                $geometry: { type: "Point",  coordinates: [ -73.9667, 40.78 ] },
-                                $minDistance: 1000,
-                                $maxDistance: 5000
-                            }
-                    }
-            }).exec().then(data => {
+            let coords = {type: 'Point', coordinates: [6, 9]};
+            Location.find({loc: {$near: coords}}).exec().then(data => {
                 res.send(data);
-            }).catch(error => console.log(error));
+            }).catch(error => {
+                res.send(JSON.stringify(error))
+            });
         });
 
     // add user
@@ -26,28 +20,5 @@ export const api = (app) => {
             res.send(data);
         }).catch(error => console.log(error));
     });
-
-    // add location
-    /*MyModel.create([{
-        name: "Polo ",
-        location: {
-            formType:'Point',
-            coordinates: [-73.9375, 40.323],
-        }
-    },
-        {
-            name: "Grounds",
-            location: {
-                formType:'Point',
-                coordinates: [-73.9375, 42.323],
-            }
-        },
-        {
-            name: "Polo Grounds",
-            location: {
-                formType:'Point',
-                coordinates: [-73.9375, 43.323],
-            }
-        }]);*/
 
 };

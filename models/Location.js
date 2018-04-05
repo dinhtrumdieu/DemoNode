@@ -1,10 +1,12 @@
 import mongoose from 'mongoose'
 
-export const MyModel = mongoose.model('location', new mongoose.Schema(
-    {
-        name: String,
-        location: {
-            formType:String,
-            coordinates: [Number],  // [<longitude>, <latitude>]
-        }
-    }).index({ location: "2dsphere" }));
+let LocationObject = mongoose.Schema({
+    loc: {
+        type: {type: String},
+        coordinates: []
+    }
+});
+// define the index
+LocationObject.index({loc: '2dsphere'});
+
+export const Location = mongoose.model('Location', LocationObject);
