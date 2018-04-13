@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-let PersonSchema =  mongoose.Schema({
+let PersonSchema = mongoose.Schema({
     name: String,
     age: Number,
     birthday: Date,
@@ -10,9 +10,8 @@ let PersonSchema =  mongoose.Schema({
         type: {type: String},
         coordinates: []
     },
+    image: String,
+    accountId: String
 });
-
-// define the index
-PersonSchema.index({loc: '2dsphere'});
 
 export const Person = mongoose.model('Person', PersonSchema);
