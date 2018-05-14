@@ -1,8 +1,8 @@
 import mongoose from 'mongoose'
 
 let FavoriteSchema = mongoose.Schema({
-    sender_id: String,
-    receiver_id: String,
+    senderId: {type: mongoose.Schema.Types.ObjectId, ref: 'Person'},
+    receiverId: {type: mongoose.Schema.Types.ObjectId, ref: 'Person'},
     is_active: Boolean
 });
 

@@ -10,8 +10,15 @@ let PersonSchema = mongoose.Schema({
         type: {type: String},
         coordinates: []
     },
-    image: String,
-    accountId: String
+    avatar: String,
+    images: [],
+    accountId: String,
+    introduce: String,
+    company: String,
+    office: String,
 });
+
+// define the index
+PersonSchema.index({loc: '2dsphere'});
 
 export const Person = mongoose.model('Person', PersonSchema);
