@@ -8,14 +8,18 @@ let PersonSchema = mongoose.Schema({
     // define the geospatial field
     loc: {
         type: {type: String},
-        coordinates: []
+        coordinates: [],
+        maxDistance:Number
     },
     avatar: String,
     images: [],
     accountId: String,
     introduce: String,
     company: String,
-    office: String,
+    job: String,
+    hometown: String,
+    address: String,
+    is_display_age: Boolean,
 });
 
 // define the index

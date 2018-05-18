@@ -3,19 +3,6 @@ import {Favorite} from "../models/Favorite";
 import {Message} from "../models/Message";
 import {Dislike} from "../models/Dislike";
 
-const listImage = [
-    'https://anhchonloc.com/wp-content/uploads/2015/11/hinh-nen-sieu-de-thuong-cho-may-tinh-2.jpg',
-    'http://file.vforum.vn/hinh/2014/4/hinh-de-thuong-ve-tinh-yeu-2.jpg',
-    'https://znews-photo-td.zadn.vn/w1024/Uploaded/ofh_fdmzsofw/2016_10_28/13151599_' +
-    '807990012635341_3384564945476612801_n_1.jpg',
-    'http://share3s.com/wp-content/uploads/2018/01/H%C3%ACnh-%E1%BA%A3nh-g%C3%A1i-xinh-m%E1%BB%99c-m%E1%BA%A1c-' +
-    'khi%E1%BA%BFn-d%C3%A2n-m%E1%BA%A1ng-chao-%C4%91%E1%BA%A3o-con-tim-16.jpg',
-    'https://4.bp.blogspot.com/-wI2XI07FYL4/VvAZ4sWPeOI/AAAAAAAAAbk/338otoe9L0U' +
-    'z7zBQ2JpOvB-k78lJ3VCEA/s1600/hinh-girl-xinh-gai-dep-hot-girl-viet-nam-01.jpg',
-    'http://xemanhdep.com/wp-content/uploads/2016/04/hinh-anh-girl-xinh-diu-dang-cam-o-va-hoa-mua-xuan-2.jpg',
-    'https://image2.tin247.com/pictures/2018/01/21/qcu1516515266.jpg'
-];
-
 export const api = (app) => {
 
     // get list
@@ -41,28 +28,23 @@ export const api = (app) => {
             const userId = data && data._id;
             const listMatches = [];
 
-            Dislike.find({'userId': userId}).exec().then(data => {
+            Favorite.find({'senderId': userId}).where('status').equals(0).exec().then(data => {
                 data.map(item => {
-                    listMatches.push(item.dislikeId);
+                    listMatches.push(item.receiverId);
                 });
-                Favorite.find({'senderId': userId}).where('is_active').equals(false).exec().then(data => {
+                // select users matched
+                Favorite.find().or([{'senderId': userId},
+                    {'receiverId': userId}]).where('status !== 0').exec().then(data => {
                     data.map(item => {
-                        listMatches.push(item.receiverId);
+                        listMatches.push((userId.toString() === item.senderId.toString())
+                            ? item.receiverId : item.senderId);
                     });
-                    // select users matched
-                    Favorite.find().or([{'senderId': userId},
-                        {'receiverId': userId}]).where('is_active').equals(true).exec().then(data => {
-                        data.map(item => {
-                            listMatches.push((userId.toString() === item.senderId.toString())
-                                ? item.receiverId : item.senderId);
-                        });
-                        // select and remove users matched
-                        Person.find({
-                            loc: {$near: coords},
-                            _id: {"$nin": listMatches}
-                        }).where('gender').equals(gender).exec().then(data => {
-                            res.send(data);
-                        }).catch(error => console.log(error));
+                    // select and remove users matched
+                    Person.find({
+                        loc: {$near: coords, $maxDistance: 50000},
+                        _id: {"$nin": listMatches}
+                    }).where('gender').equals(gender).exec().then(data => {
+                        res.send(data);
                     }).catch(error => console.log(error));
                 }).catch(error => console.log(error));
             }).catch(error => console.log(error));
@@ -95,13 +77,19 @@ export const api = (app) => {
             age: req.body.birthday,
             birthday: 20 - 4 - 1995,
             gender: req.body.gender ? "male" : 'female',
-            loc: {type: 'Point', coordinates: [req.body.location.longitude, req.body.location.latitude]},
-            // image: listImage[Math.floor(Math.random() * listImage.length)]
+            loc: {
+                type: 'Point',
+                coordinates: [req.body.location.longitude, req.body.location.latitude],
+                maxDistance: 50
+            },
             avatar: req.body.avatar,
             images: [],
             introduce: null,
             company: null,
-            office: null,
+            job: null,
+            hometown: null,
+            address: null,
+            is_display_age: true,
         };
         Person.create(user);
         res.send(JSON.stringify({avatar: 'ava.jpg'}))
@@ -111,11 +99,12 @@ export const api = (app) => {
     app.route('/sendRequest').post(function (req, res) {
         const senderId = req.body.sender_id;
         const receiverId = req.body.receiver_id;
+        const status = req.body.status;
 
         Favorite.findOne().or([{'senderId': senderId, 'receiverId': receiverId},
             {'senderId': receiverId, 'receiverId': senderId}]).exec().then(data => {
             if (data) {
-                Favorite.findOneAndUpdate({_id: data._id}, {$set: {is_active: true}}, {new: true}, function (err, doc) {
+                Favorite.findOneAndUpdate({_id: data._id}, {$set: {status: status}}, {new: true}, function (err, doc) {
                     if (err) {
                         console.log("Something wrong when updating data!");
                     }
@@ -125,7 +114,7 @@ export const api = (app) => {
                 let matches = {
                     senderId: senderId,
                     receiverId: receiverId,
-                    is_active: false
+                    status: status === -1 ? -1 : 0
                 };
                 Favorite.create(matches);
                 console.log("create")
@@ -151,7 +140,7 @@ export const api = (app) => {
     app.route('/matches').post(function (req, res) {
         const userId = req.body.userId;
         Favorite.find().populate({path: 'senderId'}).populate({path: 'receiverId'}).or([{'senderId': userId},
-            {'receiverId': userId}]).where('is_active').equals(true).exec().then(data => {
+            {'receiverId': userId}]).where('status').equals(1).exec().then(data => {
             res.send(data);
         }).catch(error => console.log(error));
     });
@@ -164,7 +153,6 @@ export const api = (app) => {
             if (err) {
                 console.log("Something wrong when updating data!");
             }
-            console.log(doc);
             res.send(doc)
         }).catch(error => console.log(error));
     });
@@ -175,14 +163,39 @@ export const api = (app) => {
         const images = req.body.images;
         const introduce = req.body.introduce;
         const company = req.body.company;
-        const office = req.body.office;
+        const job = req.body.office;
+        const hometown = req.body.hometown;
+        const address = req.body.address;
         Person.findOneAndUpdate({accountId: accountId},
-            {$set: {images: images, introduce: introduce, company: company, office: office}},
+            {
+                $set: {
+                    images: images, introduce: introduce, company: company, job: job,
+                    hometown: hometown, address: address
+                }
+            },
             {new: true}, function (err, doc) {
                 if (err) {
                     console.log("Something wrong when updating data!");
                 }
-                console.log(doc);
+                res.send(doc)
+            }).catch(error => console.log(error));
+    });
+
+    app.route('/updatePreferences').post(function (req, res) {
+        const accountId = req.headers.authorization;
+        const is_display_age = req.body.is_display_age;
+        const maxDistance = req.body.maxDistance;
+        Person.findOneAndUpdate({accountId: accountId},
+            {
+                $set: {
+                    is_display_age: is_display_age,
+                    "loc.maxDistance": maxDistance
+                },
+            },
+            {new: true}, function (err, doc) {
+                if (err) {
+                    console.log("Something wrong when updating data!");
+                }
                 res.send(doc)
             }).catch(error => console.log(error));
     });
@@ -192,6 +205,18 @@ export const api = (app) => {
         const id_room = req.params.id_room;
         Message.find().where('id_room').equals(id_room).exec().then(data => {
             res.send(data);
+        }).catch(error => console.log(error));
+    });
+
+    // get list message
+    app.route('/listMessage').post(function (req, res) {
+        const userId = req.body.userId;
+        Favorite.find().populate({path: 'senderId'}).populate({path: 'receiverId'}).or([{'senderId': userId},
+            {'receiverId': userId}]).where('status').equals(1).exec().then(async data => {
+            const listMessage = data.map(async item => {
+                return await Message.findOne().where('id_room').equals(item._id);
+            });
+            Promise.all(listMessage).then(data => console.log(data));
         }).catch(error => console.log(error));
     });
 
