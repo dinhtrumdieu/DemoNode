@@ -3,10 +3,45 @@
   <component name="ChangeListManager">
     <list default="true" id="daeaba91-3a4b-4bb1-97d3-2b256f34e9f4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Favorite.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Favorite.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Person.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Person.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/socket/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/socket/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_0254362a7fc15cb8f600e895e271e252.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_0403db710ecf76abffd110b458813df2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_07f29a994bad0e465bf990d4abfd6221.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_1149d37dfdd5cc3598b74f7026887df5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_1208a7c31b485d9323b4c52702fdc707.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_1208f50ad110ccc95fe4b310e4a09ec1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_1c55bd48e7e85c9573a2ca07950e669f.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_1f36b92c2b07f008150f52d238f2bfc4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_1f5fdb20b008ef7cf97fdad5e750242e.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_1fa58ac03728a0b7ed72eddf9726bfbb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_2aa22acf93c6598170ff87226ebc8b3c.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_304d080ca19718d479c419705eb15e37.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_39f808661c1dd9fe1463710f0c5e7b14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_3c388f25485aa02bfb4b3085f8905792.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_4890dc0c84e03b168c39eba2610ec48a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_51e43237d69057578212dd028f591fb8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_622d2d3410a2516142cdc8e66a3b7046.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_684d585dd57f054052dd803ecf68541a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_7270f13990e83b8f4a957fc84548b4f1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_76947da6d60c4bdbf91484873b1ff0ce.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_86cbf111768c5a875e90fb7ebf173251.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_9ba3d735db0c773f0a994c301f53db26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_9f868503944529afbb7cf4306554925a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_a118f677ffa5e7c3cfc93c5914811ca4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_a296955a2dc725e22d98a0877288d487.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_a65fe4d17d204ffc1e8ec76f607bd57b.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_aa89e777fe008d17bb662aaff2430a20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_b5a381feb2a3b4af6aefd43c25ca8df2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_ba61006043c3d1a80aa2de3689a22d75.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_c27aaaa922f973be1373f4dcaaa11299.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_c37384926704a84039847b693d3e33ea.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_c986514c5d1ae330e5daaa63aa6c00f4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_d60b419f9c2e57d3e08c22a752195a85.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_dea5d43046d8f33c49bded6822484d04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_e1278db17c498bcd441e40a353a03360.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_eb2b9c0fe846e51f4a0e3c6d1bb14fd0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_f5f368336c1d39256818a01a544a74ab.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_f6c93db0248b2e7a8ffb7b28d6e146c3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image/upload_fa0b338ec149a504153802e18e5054b3.jpg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,56 +54,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Person.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/Person.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/socket/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="42" lean-forward="true" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/routes/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="43" column="68" lean-forward="true" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dislike.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/Dislike.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="46" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Favorite.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/Favorite.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -135,7 +121,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="698" />
@@ -162,7 +148,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -170,15 +155,11 @@
               <item name="DemoNode" type="b2602c69:ProjectViewProjectNode" />
               <item name="DemoNode" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="DemoNode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DemoNode" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -281,12 +262,14 @@
       <workItem from="1526409877331" duration="1081000" />
       <workItem from="1526438437433" duration="1336000" />
       <workItem from="1526529306150" duration="3905000" />
-      <workItem from="1526611081641" duration="12512000" />
+      <workItem from="1526611081641" duration="12885000" />
+      <workItem from="1526703094489" duration="1422000" />
+      <workItem from="1526739662284" duration="2383000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192330000" />
+    <option name="totallyTimeSpent" value="196508000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -298,18 +281,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="698" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="698" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.35742652" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49916804" visible="true" weight="0.35742652" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3291536" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50277996" side_tool="true" weight="0.33665007" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3283582" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49722" visible="true" weight="0.39600664" />
+      <window_info id="Structure" order="1" sideWeight="0.50083196" side_tool="true" weight="0.35742652" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49722" weight="0.39600664" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -329,58 +312,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/javascript/nodejs/library/node-globals-stub.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="58" column="4" selection-start-line="58" selection-start-column="4" selection-end-line="58" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="490" selection-start-line="490" selection-end-line="490" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose/lib/schema.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="1219" selection-start-line="1219" selection-end-line="1219" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1152" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mongoose-geojson-schema/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-108" />
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -486,14 +417,14 @@
     <entry file="file://$PROJECT_DIR$/socket/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="42" lean-forward="true" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+          <caret line="7" column="42" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/Person.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -507,19 +438,103 @@
     <entry file="file://$PROJECT_DIR$/models/Favorite.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
-          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="43" column="68" lean-forward="true" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
+        <state relative-caret-position="150">
+          <caret line="121" column="29" selection-start-line="121" selection-start-column="29" selection-end-line="121" selection-end-column="29" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_76f21028b017d87a8c2d5a42b6897c30.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_0f2e8d4ed99334a9e591cdfab73a48b7.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_9fb88eb8c1a12b1e74e1c040107cad65.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_6cacda6f5c9a605015a282aaf2355cd6.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_60db4d93911d64ed7fc14e416c35b973.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_1a3abb2fd51a658b9cad2e3c13d373ce.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_5ca420a2e8493a5cc9389a0f24063eae.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_91ff74bd120f4b9b014b3b3b46a181fe.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_0584d7172b7f0d2131851ae399690109.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_951fb1aa0105cc27969a95575442e986.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_6003fb010997c11d5a853e03d97b0186.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_9348b78624eb27e1f5b2039cd3198e54.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_12790b18f3202751183f853f026c93f6.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_21664e1bb49fb478d04667dd1ebb5980.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_6368994e67865c49198b1de8be09fb5e.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_25445209c520ce47bd50f9212e535cc1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_45971352a40074216445d29864a29ae4.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_a1b7564db1978d06e8628109ce6a4dd4.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_a1745b82cc27348bb097f0ec96ce34d0.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_a53d369248a48d39dc446305acc29f0b.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_c27034e9d3ec553da939550b1a6d1859.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_ceac94170e54021f8f10f4132a2287a1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_d5cc192e7ffe06fd6b33c237d27fa93a.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_d31892b1d68497a6cb00b711692b11f5.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_fe2f6ec66ec20056835985a7c7ecb901.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_e2179260c16925b2bd44d1664b3d4838.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_ca33663394caf69e252dcf0bdbcafd0e.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/image/upload_e17f09ca57af6ff6160ac6da658d8b6b.jpg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
   <component name="masterDetails">
