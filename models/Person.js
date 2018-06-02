@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 let PersonSchema = mongoose.Schema({
     name: String,
-    age: Number,
+    age: String,
     birthday: Date,
     gender: String,
     // define the geospatial field

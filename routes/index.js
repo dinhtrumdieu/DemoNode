@@ -32,19 +32,26 @@ export const api = (app) => {
                 data.map(item => {
                     listMatches.push(item.receiverId);
                 });
-                // select users matched
                 Favorite.find().or([{'senderId': userId},
-                    {'receiverId': userId}]).where('status !== 0').exec().then(data => {
+                    {'receiverId': userId}]).where('status').equals(-1).exec().then(data => {
                     data.map(item => {
                         listMatches.push((userId.toString() === item.senderId.toString())
                             ? item.receiverId : item.senderId);
                     });
-                    // select and remove users matched
-                    Person.find({
-                        loc: {$near: coords, $maxDistance: 50000},
-                        _id: {"$nin": listMatches}
-                    }).where('gender').equals(gender).exec().then(data => {
-                        res.send(data);
+                    // select users matched
+                    Favorite.find().or([{'senderId': userId},
+                        {'receiverId': userId}]).where('status').equals(1).exec().then(data => {
+                        data.map(item => {
+                            listMatches.push((userId.toString() === item.senderId.toString())
+                                ? item.receiverId : item.senderId);
+                        });
+                        // select and remove users matched
+                        Person.find({
+                            loc: {$near: coords, $maxDistance: 50000},
+                            _id: {"$nin": listMatches}
+                        }).where('gender').equals(gender).exec().then(data => {
+                            res.send(data);
+                        }).catch(error => console.log(error));
                     }).catch(error => console.log(error));
                 }).catch(error => console.log(error));
             }).catch(error => console.log(error));
@@ -104,12 +111,22 @@ export const api = (app) => {
         Favorite.findOne().or([{'senderId': senderId, 'receiverId': receiverId},
             {'senderId': receiverId, 'receiverId': senderId}]).exec().then(data => {
             if (data) {
-                Favorite.findOneAndUpdate({_id: data._id}, {$set: {status: status}}, {new: true}, function (err, doc) {
-                    if (err) {
-                        console.log("Something wrong when updating data!");
-                    }
-                    console.log("matches: " + doc);
-                });
+                console.log("update: "+status);
+                if (status === -1) {
+                    let matches = {
+                        senderId: senderId,
+                        receiverId: receiverId,
+                        status:  -1
+                    };
+                    Favorite.create(matches);
+                } else {
+                    Favorite.findOneAndUpdate({_id: data._id}, {$set: {status: 1}}, {new: true}, function (err, doc) {
+                        if (err) {
+                            console.log("Something wrong when updating data!");
+                        }
+                        console.log("matches: " + doc);
+                    });
+                }
             } else {
                 let matches = {
                     senderId: senderId,
@@ -217,6 +234,21 @@ export const api = (app) => {
                 return await Message.findOne().where('id_room').equals(item._id);
             });
             Promise.all(listMessage).then(data => console.log(data));
+        }).catch(error => console.log(error));
+    });
+
+    // get list send request
+    app.route('/getRequest/:userId').get(function (req, res) {
+        const userId = req.params.userId;
+        Favorite.find({'senderId': userId}).populate({path: 'receiverId'}).where('status').equals(0).exec().then(data => {
+            res.send(data);
+        }).catch(error => console.log(error));
+    });
+
+    app.route('/getNotMatches/:userId').get(function (req, res) {
+        const userId = req.params.userId;
+        Favorite.find({'senderId': userId}).populate({path: 'receiverId'}).where('status').equals(-1).exec().then(data => {
+            res.send(data);
         }).catch(error => console.log(error));
     });
 
